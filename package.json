@@ -1,0 +1,28 @@
+{
+  "name": "sass-webpack-handlebars",
+  "version": "1.0.0",
+  "description": "A sample app to understand how to use handlebars with sass and webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c3s4/sass-webpack-handlebars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/c3s4/sass-webpack-handlebars/issues"
+  },
+  "homepage": "https://github.com/c3s4/sass-webpack-handlebars#readme",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "eslint": "^3.14.0",
+    "eslint-loader": "^1.6.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
