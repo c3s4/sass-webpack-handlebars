@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/c3s4/sass-webpack-handlebars.git"
   },
-  "author": "",
+  "author": "Davide Cesaroni",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/c3s4/sass-webpack-handlebars/issues"
@@ -26,10 +26,10 @@
     "css-loader": "^0.26.1",
     "eslint": "^3.14.0",
     "eslint-loader": "^1.6.1",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.5",
     "node-sass": "^4.3.0",
     "sass-loader": "^4.1.1",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
   }
 }
