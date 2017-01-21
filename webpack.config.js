@@ -33,6 +33,9 @@ module.exports = {
           fallbackLoader: "style-loader",
           loader: ['css-loader', 'sass-loader']
         })
+      }, {
+        test: /\.handlebars$/,
+        loader: "handlebars-loader"
       }
     ]
   },
