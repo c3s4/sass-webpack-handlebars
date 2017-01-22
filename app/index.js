@@ -8,7 +8,7 @@ class AppComponent extends AbstractComponent {
     this._onChildUpdateCallback = onChildUpdateCallback;
     this._chat = new ChatComponent({title: 'My super cool chat'});
     this._chat.addUpdateListener(this);
-    // setInterval(this._chat.onChildUpdate.bind(this._chat), 1000);
+    this.addChild(this._chat);
   }
 
   onChildUpdate() {
@@ -24,7 +24,10 @@ class AppComponent extends AbstractComponent {
 
 
 let app = new AppComponent((newHtml) => {
-  document.querySelector('#app').innerHTML = newHtml;  
+  document.querySelector('#app').innerHTML = newHtml; 
+  app.onRendered();
 });
 
 document.querySelector('#app').innerHTML = app.html;
+app.onRendered();
+

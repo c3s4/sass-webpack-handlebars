@@ -4,6 +4,7 @@ export default class AbstractComponent {
       throw new TypeError("Cannot construct Interface instances directly");
     }
     this._updateListeners = [];
+    this._childrenList = [];
     this._context = initialContext;
   }
 
@@ -25,6 +26,16 @@ export default class AbstractComponent {
    * 
    */
   onChildUpdate() {
+    this.notifyListeners();
+  }
+
+  onRendered() {
+    this._childrenList.forEach((child) => {
+      child.onRendered();
+    });
+  }
+
+  notifyListeners() {
     this._updateListeners.forEach((listener) => {
       listener.onChildUpdate();
     });
@@ -36,7 +47,14 @@ export default class AbstractComponent {
     } else {
       throw new TypeError("You cannot add a lister of type: " + listener.constructor);
     }
-    
+  }
+
+  addChild(child) {
+    if (child instanceof AbstractComponent) {
+      this._childrenList.push(child);
+    } else {
+      throw new TypeError("You cannot add a lister of type: " + child.constructor);
+    }
   }
 
 }
