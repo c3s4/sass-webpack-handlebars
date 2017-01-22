@@ -1,5 +1,5 @@
-import * as template from './file.handlebars';
+import * as template from './compoennts/chat/chat.handlebars';
 
 let html = template();
 
-document.body.innerHTML = html;
+document.querySelector('#app').innerHTML = html;
