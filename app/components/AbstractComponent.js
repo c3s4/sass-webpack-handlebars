@@ -1,10 +1,10 @@
 export default class AbstractComponent {
-  constructor(initialContext) {
+  constructor(initialContext = {}) {
     if (new.target === AbstractComponent) {
       throw new TypeError("Cannot construct Interface instances directly");
     }
     this._updateListeners = [];
-    this._context = initialContext ? initialContext : {};
+    this._context = initialContext;
   }
 
   /**
