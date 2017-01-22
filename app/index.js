@@ -2,18 +2,19 @@ import AbstractComponent from './components/AbstractComponent';
 import ChatComponent from './components/chat/ChatComponent';
 
 
-
-
 class AppComponent extends AbstractComponent {
-  constructor() {
+  constructor(onChildUpdateCallback) {
     super();
+    this._onChildUpdateCallback = onChildUpdateCallback;
     this._chat = new ChatComponent();
     this._chat.addUpdateListener(this);
     setInterval(this._chat.onChildUpdate.bind(this._chat), 1000);
   }
 
   onChildUpdate() {
-    document.querySelector('#app').innerHTML = this.html;    
+    if (this._onChildUpdateCallback) {
+      this._onChildUpdateCallback(this.html);
+    }
   }
 
   get html() {
@@ -22,6 +23,8 @@ class AppComponent extends AbstractComponent {
 }
 
 
-let app = new AppComponent();
-document.querySelector('#app').innerHTML = app.html;
+let app = new AppComponent((newHtml) => {
+  document.querySelector('#app').innerHTML = newHtml;  
+});
 
+document.querySelector('#app').innerHTML = app.html;
