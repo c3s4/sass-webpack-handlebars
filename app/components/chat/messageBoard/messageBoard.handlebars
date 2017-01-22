@@ -1,5 +1,5 @@
 <div class="messageBoard">
-  {{> ../message/message }}
-  {{> ../message/message }}
-  {{> ../message/message }}
+  {{#each messages}}
+    {{> ../message/message }}
+  {{/each}}
 </div>
