@@ -6,9 +6,9 @@ class AppComponent extends AbstractComponent {
   constructor(onChildUpdateCallback) {
     super();
     this._onChildUpdateCallback = onChildUpdateCallback;
-    this._chat = new ChatComponent();
+    this._chat = new ChatComponent({title: 'My super cool chat'});
     this._chat.addUpdateListener(this);
-    setInterval(this._chat.onChildUpdate.bind(this._chat), 1000);
+    // setInterval(this._chat.onChildUpdate.bind(this._chat), 1000);
   }
 
   onChildUpdate() {

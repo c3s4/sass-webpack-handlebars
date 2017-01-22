@@ -1,11 +1,12 @@
 import AbstractComponent from '../AbstractComponent';
+import SendBox from './sendBox/SendBox';
 import * as chatTemplate from './chat.handlebars';
 
 export default class ChatComponent extends AbstractComponent {
-  constructor() {
-    super();
-    this._context = {};
-    this._context.title = 'prova';
+  constructor(initialContext) {
+    super(initialContext);
+    this._sendBoxComponent = new SendBox();
+    this._context.sendBoxComponent = this._sendBoxComponent.html;
   }
 
   get html() {
@@ -13,7 +14,6 @@ export default class ChatComponent extends AbstractComponent {
   }
 
   onChildUpdate() {
-    this._context.title = new Date().toString();
     super.onChildUpdate();
   }
 
