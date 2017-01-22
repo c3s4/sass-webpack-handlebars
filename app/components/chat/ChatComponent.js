@@ -2,6 +2,7 @@ import AbstractComponent from '../AbstractComponent';
 import SendBoxComponent from './sendBox/SendBoxComponent';
 import MessageBoardComponent from './messageBoard/MessageBoardComponent';
 import * as chatTemplate from './chat.handlebars';
+import './chatComponent.scss';
 
 export default class ChatComponent extends AbstractComponent {
   constructor(initialContext) {

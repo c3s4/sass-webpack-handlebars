@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+div.chat {
+  width: $chat-width;
+  margin: 10px auto;
+}
+
+div.titleBox {
+  background-color: $secondary-color;
+  color: $primary-color;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}

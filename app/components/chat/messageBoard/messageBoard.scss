@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+
+span.message {
+  display: inline-block;
+  font-size: 10pt;
+  padding: 7px 5px;
+  border: 1px solid $primary-border-color;
+  background: $primary-color;
+  border-radius: 3px;
+  margin: 5px 0;
+}

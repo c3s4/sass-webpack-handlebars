@@ -1,6 +1,7 @@
 import AbstractComponent from '../../AbstractComponent';
 import EventBus from '../../../bus/eventbus';
 import Events from '../../../bus/events';
+import './messageBoard.scss';
 
 import * as messageBoardTemplate from './messageBoard.handlebars';
 

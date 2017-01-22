@@ -2,7 +2,7 @@ import AbstracComponent from '../../AbstractComponent';
 import EventBus from '../../../bus/eventbus';
 import Events from '../../../bus/events';
 import * as sendBoxTemplate from './sendBox.handlebars';
-
+import './sendBox.scss';
 
 export default class SendBoxComponent extends AbstracComponent{
   constructor() {

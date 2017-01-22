@@ -1,5 +1,6 @@
 import AbstractComponent from './components/AbstractComponent';
 import ChatComponent from './components/chat/ChatComponent';
+import './components/style.scss';
 
 
 class AppComponent extends AbstractComponent {
