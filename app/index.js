@@ -1,4 +1,4 @@
-import * as template from './compoennts/chat/chat.handlebars';
+import * as template from './components/chat/chat.handlebars';
 
 let html = template();
 
