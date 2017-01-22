@@ -2,7 +2,7 @@ import AbstracComponent from '../../AbstractComponent';
 import * as sendBoxTemplate from './sendBox.handlebars';
 
 
-export default class SendBox extends AbstracComponent{
+export default class SendBoxComponent extends AbstracComponent{
   constructor() {
     super();
   }

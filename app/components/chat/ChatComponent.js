@@ -1,11 +1,11 @@
 import AbstractComponent from '../AbstractComponent';
-import SendBox from './sendBox/SendBox';
+import SendBoxComponent from './sendBox/SendBoxComponent';
 import * as chatTemplate from './chat.handlebars';
 
 export default class ChatComponent extends AbstractComponent {
   constructor(initialContext) {
     super(initialContext);
-    this._sendBoxComponent = new SendBox();
+    this._sendBoxComponent = new SendBoxComponent();
     this._context.sendBoxComponent = this._sendBoxComponent.html;
   }
 
